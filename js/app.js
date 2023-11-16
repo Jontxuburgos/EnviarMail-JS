@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const btnSubmit = document.querySelector('#formulario button[type="submit"]')
 
     //Asignar Eventos 
-    inputEmail.addEventListener('blur', validar);
-    inputAsunto.addEventListener('blur', validar);
-    inputMensaje.addEventListener('blur', validar);
+    inputEmail.addEventListener('input', validar);
+    inputAsunto.addEventListener('input', validar);
+    inputMensaje.addEventListener('input', validar);
 
     function validar(e) {
 

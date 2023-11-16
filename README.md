@@ -8,6 +8,7 @@ Desarrollo de funcionalidades de un simulador de envio de emails con JS.
 - Reinicio del formulario cuando se envia el email
 - Mostrar mensaje de exito al enviar el formulario correctamente y borrado del mensaje automatico
 - Añadido de un campo extra "CC"
+
     - No es obligatorio añadirlo
     - Se valida con expresion regular ya que es para introduir un correo
     - Se resetea con el conjunto del formulario al resetear y al enviar

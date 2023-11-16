@@ -10,7 +10,14 @@ document.addEventListener('DOMContentLoaded', function(){
     inputMensaje.addEventListener('blur', validar);
 
     function validar(e) {
-        console.log(e.target.value);
+        if (e.target.value.trim === '') {//.trim elimina los espacios en blanco innecesarios
+            
+            
+            
+            console.log('vacio');
+        } else {
+            console.log('lleno');
+        }
     };
 });
 

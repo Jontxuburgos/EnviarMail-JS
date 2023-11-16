@@ -4,6 +4,8 @@ Desarrollo de funcionalidades de un simulador de envio de emails con JS.
 - Validación del campo "Email" mediante expresión regular
 - Habilitar boton de envió siempre que los datos este correctamente introducidos
 - Habilitar boton de reseteo de formulario
+- Mostrar spinner cuando se envia el email
+- Reinicio del formulario cuando se envia el email
 
 ----------------------------------------------------------------------------------------
 

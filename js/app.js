@@ -24,21 +24,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
     btnReset.addEventListener('click', function(e) {
         e.preventDefault();
-
-        //reiniciar el obj
-        email.email = '';
-        email.asunto = '';
-        email.mensaje = '';
-
-        formulario.reset();
-        comprobarEmail();
-    })
+        resetFormulario();
+        })
 
     function enviarEmail(e) {
         e.preventDefault();
 
         spinner.classList.add('flex');
         spinner.classList.remove('hidden');
+
+        setTimeout(() => {
+            spinner.classList.remove('flex');
+            spinner.classList.add('hidden');
+            resetFormulario();
+        }, 3000)
     };
 
 
@@ -105,6 +104,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
         
     };
+
+
+
+    function resetFormulario (){
+        //reiniciar el obj
+        email.email = '';
+        email.asunto = '';
+        email.mensaje = '';
+        
+        formulario.reset();
+        comprobarEmail();
+    }
 
 
 });

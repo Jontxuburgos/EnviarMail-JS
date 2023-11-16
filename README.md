@@ -6,6 +6,7 @@ Desarrollo de funcionalidades de un simulador de envio de emails con JS.
 - Habilitar boton de reseteo de formulario
 - Mostrar spinner cuando se envia el email
 - Reinicio del formulario cuando se envia el email
+- Mostrar mensaje de exito al enviar el formulario correctamente y borrado del mensaje automatico
 
 ----------------------------------------------------------------------------------------
 

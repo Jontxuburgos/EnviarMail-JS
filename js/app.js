@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
+    const btnSubmit = document.querySelector('#formulario button[type="submit"]')
 
     //Asignar Eventos 
     inputEmail.addEventListener('blur', validar);
@@ -21,11 +22,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if (e.target.value.trim() === '') {//.trim elimina los espacios en blanco innecesarios
             mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
+            email[e.target.name] = '';
+            comprobarEmail();
             return;
         } 
 
         if (e.target.id === 'email' && !validarEmail(e.target.value)) {
-            mostrarAlerta('El email no es válido', e.target.parentElement)
+            mostrarAlerta('El email no es válido', e.target.parentElement);
+            email[e.target.name] = '';
+            comprobarEmail();
             return;
         };
 
@@ -33,14 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         //Asignar valores
         email[e.target.name] = e.target.value.trim().toLowerCase();
-        // asunto[e.target.name] = asignarValores();
-        // mensaje[e.target.name] = asignarValores();
 
-        // function asignarValores() {
-        //     e.target.value.trim().toLowerCase();
-        // }
-
-        //Comprobar Email
         comprobarEmail();
 
     };
@@ -73,7 +71,15 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function comprobarEmail() {
-        console.log(Object.values(email).includes(''));
+        if((Object.values(email).includes(''))) {
+            btnSubmit.classList.add('opacity-50');
+            btnSubmit.disble = true;
+            return;
+        } 
+        btnSubmit.classList.remove('opacity-50');
+        btnSubmit.disble = false;
+
+        
     };
 
 

@@ -11,23 +11,22 @@ document.addEventListener('DOMContentLoaded', function(){
     inputMensaje.addEventListener('blur', validar);
 
     function validar(e) {
+
         if (e.target.value.trim() === '') {//.trim elimina los espacios en blanco innecesarios
-            mostrarAlerta(`El campo ${e.target.id} es obligatorio`);
+            mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
         } else {
             console.log('lleno');
         }
     };
 
-    function mostrarAlerta(mensaje) {
+    function mostrarAlerta(mensaje, referencia) {
         //Generar Alerta en HTML
         const error = document.createElement('P');
         error.textContent = mensaje;
         error.classList.add('bg-red-600', 'text-white', 'p-2', 'text-center')
 
-
-
         //Inyectar el error al formulario
-        formulario.appendChild(error);
+        referencia.appendChild(error);
         
         ;
     }

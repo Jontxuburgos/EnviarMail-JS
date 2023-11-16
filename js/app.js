@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
+
+    const email = {
+        email: '',
+        asunto: '',
+        mensaje: ''
+    }
+
     //Seleccionar los elementos de la Interfaz
     const inputEmail = document.querySelector('#email');
     const inputAsunto = document.querySelector('#asunto');
@@ -23,6 +30,19 @@ document.addEventListener('DOMContentLoaded', function(){
         };
 
         limpiarAlerta(e.target.parentElement);
+
+        //Asignar valores
+        email[e.target.name] = e.target.value.trim().toLowerCase();
+        // asunto[e.target.name] = asignarValores();
+        // mensaje[e.target.name] = asignarValores();
+
+        // function asignarValores() {
+        //     e.target.value.trim().toLowerCase();
+        // }
+
+        //Comprobar Email
+        comprobarEmail();
+
     };
 
     function mostrarAlerta(mensaje, referencia) {
@@ -51,6 +71,11 @@ document.addEventListener('DOMContentLoaded', function(){
         return resultado;
 
     }
+
+    function comprobarEmail() {
+        console.log(Object.values(email).includes(''));
+    };
+
 
 });
 

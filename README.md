@@ -13,6 +13,8 @@ Desarrollo de funcionalidades de un simulador de envio de emails con JS.
     - Se valida con expresion regular ya que es para introduir un correo
     - Se resetea con el conjunto del formulario al resetear y al enviar
 
+Enlace a la app: https://brilliant-raindrop-002e93.netlify.app/
+
 ----------------------------------------------------------------------------------------
 
 El contenido HTML pertenece a Juan Pablo De la torre Valdez. 
